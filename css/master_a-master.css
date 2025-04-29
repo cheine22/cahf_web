@@ -1,0 +1,36 @@
+#u104-6
+{
+	background-color: transparent;
+	line-height: 66px;
+	text-align: center;
+	letter-spacing: 10px;
+	color: #B581DC;
+	font-size: 58px;
+	font-family: garamond-premier-pro-subhead, serif;
+	font-weight: 400;
+}
+
+#u104-4
+{
+	line-height: 0px;/* 0 for mixed font sized paras; applied on spans instead */
+}
+
+#u104-3
+{
+	font-size: 14px;
+	letter-spacing: 1px;
+	line-height: 16px;
+}
+
+#u111-4
+{
+	background-color: transparent;
+	color: #B581DC;
+	text-align: center;
+	font-size: 14px;
+	letter-spacing: 0px;
+	font-family: garamond-premier-pro-subhead, serif;
+	font-weight: 400;
+}
+
+
