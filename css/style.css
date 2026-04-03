@@ -57,7 +57,7 @@ a {
 .content {
   max-width: 900px;
   margin: 0 auto;
-  padding: 0 24px 12px;
+  padding: 0 24px 24px;
 }
 
 /* ===== Story Section — text wraps around photo ===== */
@@ -111,7 +111,7 @@ a {
 .site-footer {
   clear: both;
   border-top: 1px solid #e8e0ef;
-  padding: 32px 24px 20px;
+  padding: 24px 24px 20px;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -172,6 +172,10 @@ a {
   font-style: normal;
 }
 
+.mobile-break {
+  display: none;
+}
+
 /* ===== Wide — use flex so image and text align ===== */
 @media (min-width: 900px) {
   .story {
@@ -230,7 +234,11 @@ a {
   }
 
   .content {
-    padding: 0 16px 32px;
+    padding: 0 16px 20px;
+  }
+
+  .mobile-break {
+    display: block;
   }
 
   .footer-inner {
@@ -244,7 +252,7 @@ a {
   }
 
   .site-footer {
-    padding: 24px 16px 16px;
+    padding: 20px 16px 16px;
   }
 
   .footer-logo img {
