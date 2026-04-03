@@ -1,0 +1,263 @@
+/* ===== Reset & Base ===== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background-color: #fff;
+  color: #4e4e4e;
+  line-height: 1.6;
+  font-size: 18px;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: #4679ff;
+}
+
+/* ===== Header ===== */
+.site-header {
+  text-align: center;
+  padding: 36px 20px 24px;
+}
+
+.site-header h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  font-size: 52px;
+  letter-spacing: 8px;
+  color: #b581dc;
+  line-height: 1.2;
+  overflow-wrap: break-word;
+}
+
+.site-header .subtitle {
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #b581dc;
+  margin-top: 4px;
+}
+
+/* ===== Main Content ===== */
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px 12px;
+}
+
+/* ===== Story Section — text wraps around photo ===== */
+.story {
+  font-style: italic;
+  font-size: 19px;
+  line-height: 1.55;
+  color: #4e4e4e;
+}
+
+.story p {
+  margin-bottom: 13px;
+}
+
+.story .date {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.story .signature {
+  margin-top: 0;
+}
+
+/* Default (medium widths): float photo, text wraps around */
+.claire-photo {
+  float: right;
+  width: 52%;
+  margin: 20px 0 4px 28px;
+}
+
+.photo-wrap {
+  position: relative;
+}
+
+.claire-photo img {
+  width: 100%;
+  display: block;
+}
+
+.claire-photo figcaption {
+  position: absolute;
+  bottom: 2px;
+  right: 4px;
+  text-align: right;
+  font-style: italic;
+  color: #8e8e92;
+  font-size: 13px;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  clear: both;
+  border-top: 1px solid #e8e0ef;
+  padding: 32px 24px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.footer-text {
+  text-align: center;
+  flex: 1 1 220px;
+}
+
+.foundation-name {
+  font-size: 16px;
+  color: #b581dc;
+  letter-spacing: 0.5px;
+  font-style: normal;
+}
+
+.foundation-tagline {
+  font-size: 15px;
+  font-style: italic;
+  color: #b581dc;
+}
+
+.footer-logo {
+  flex: 0 0 auto;
+}
+
+.footer-logo img {
+  width: 90px;
+  height: auto;
+}
+
+.footer-link {
+  flex: 1 1 220px;
+  text-align: center;
+  font-size: 15px;
+  color: #b581dc;
+}
+
+.footer-link a {
+  color: #4679ff;
+  text-decoration: underline;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 12px;
+  color: #b581dc;
+  margin-top: 28px;
+  letter-spacing: 0.3px;
+  font-style: normal;
+}
+
+/* ===== Wide — use flex so image and text align ===== */
+@media (min-width: 900px) {
+  .story {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .claire-photo {
+    float: none;
+    flex: 0 0 52%;
+    order: 2;
+    margin: 0 0 0 28px;
+  }
+
+  .story .first-paragraph {
+    flex: 1;
+    min-width: 0;
+    order: 1;
+  }
+
+  /* Full-width paragraphs after the first one */
+  .story p:nth-child(n+3) {
+    flex: 0 0 100%;
+    order: 3;
+  }
+}
+
+/* ===== Small — stack photo above text ===== */
+@media (max-width: 640px) {
+  .site-header {
+    padding: 24px 12px 16px;
+  }
+
+  .site-header h1 {
+    font-size: 7.5vw;
+    letter-spacing: 2px;
+  }
+
+  .site-header .subtitle {
+    font-size: 10px;
+    letter-spacing: 0.5px;
+  }
+
+  .claire-photo {
+    float: none;
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+
+  .claire-photo figcaption {
+    text-align: center;
+  }
+
+  .story {
+    font-size: 17px;
+  }
+
+  .content {
+    padding: 0 16px 32px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .footer-text,
+  .footer-link {
+    flex-basis: auto;
+  }
+
+  .site-footer {
+    padding: 24px 16px 16px;
+  }
+
+  .footer-logo img {
+    width: 70px;
+  }
+
+  .footer-link,
+  .foundation-name,
+  .foundation-tagline {
+    font-size: 14px;
+  }
+
+  .copyright {
+    font-size: 11px;
+  }
+}
